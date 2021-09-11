@@ -4,13 +4,13 @@ public class Utilities {
     }
     private  static void testTextBetweenDelimiter(){
         String output=null;
-        output= textBetweenDelimiter("1997ismail.hosen@gmail.com","@",".");
+        output= textBetweenDelimiter("1997ismail.HOSEN@gmail.com","@",".");
         if(output.equals("gmail")){
             System.out.println("Passed");
         }else{
             System.out.println("Failed");
         }
-        output=textBetweenDelimiter("1997ismail.hosen@gmail.com","@","@");
+        output=textBetweenDelimiter("1997ismail.HOSEN@gmail.com","@","@");
         if(output==null){
             // happy case
             System.out.println("Passed");
@@ -18,13 +18,13 @@ public class Utilities {
             // Failure case
             System.out.println("failed");
         }
-        output=textBetweenDelimiter("1997ismail.hosen@@gmail.com","@","@");
+        output=textBetweenDelimiter("1997ismail.HOSEN@@gmail.com","@","@");
         if(output.equals("")){
             System.out.println("Passed");
         }else{
             System.out.println("Failed");
         }
-        output=textBetweenDelimiter("1997ismail.hosen@@gmail.com",null,"@");
+        output=textBetweenDelimiter("1997ismail.HOSEN@@gmail.com",null,"@");
         if(output==null){
             System.out.println("Passed");
         }else{
