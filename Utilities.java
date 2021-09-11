@@ -12,9 +12,11 @@ public class Utilities {
         }
         output=textBetweenDelimiter("1997ismail.hosen@gmail.com","@","@");
         if(output==null){
+            // happy case
             System.out.println("Passed");
         }else{
-            System.out.println("Failed");
+            // Failure case
+            System.out.println("failed");
         }
         output=textBetweenDelimiter("1997ismail.hosen@@gmail.com","@","@");
         if(output.equals("")){
