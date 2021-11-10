@@ -2,6 +2,7 @@ public class Utilities {
     public static void main(String[] args) {
         testTextBetweenDelimiter();
     }
+
     private  static void testTextBetweenDelimiter(){
         String output=null;
         output= textBetweenDelimiter("1997ISMAIL.HOSEN@gmail.com","@",".");
@@ -34,7 +35,6 @@ public class Utilities {
     //It will extract text between two given delimiter.
     //If any delimiter isn't present then it will return null.
     //If both delimiter in consecutive sequence then it will return empty String.
-    //if any of the three String is null then it will return null
     public static String textBetweenDelimiter(String givenText,String firstDelimiter,String secondDelimiter){
         String output=null;
         if(givenText==null || firstDelimiter==null || secondDelimiter==null){
