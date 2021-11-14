@@ -15,8 +15,11 @@ public class MyHashMap<X,Y>{
         }
     }
 
+    //This is a test comment
     private int capacity=10;
+    //This is a test comment
     private Node[] table;
+    //This is a test comment(2)
     private int size = 0;
 
     public MyHashMap() {
