@@ -117,9 +117,12 @@ public class Directory1 {
                     InputStream stream1 = new FileInputStream(file1);
                     for (Object children2 : v1) {
                         String s2 = children2.toString();
-                        if (children1 != children2)
-                            continue;
                         File file2 = new File(s2);
+                        if (!file1.getName().equals(file2.getName()))
+                            continue;
+                   //     if (children1 != children2)
+                  //          continue;
+
                         InputStream stream2 = new FileInputStream(file2);
                         int read1;
                         int read2;
