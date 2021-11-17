@@ -2,30 +2,16 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
-public class Directories {
+public  class Directories {
     static String[] testPaths;
     static ArrayList<String> paths = new ArrayList<>();
     static ArrayList<String> names = new ArrayList<>();
+    static ArrayList<String> filePaths = new ArrayList<>();
     static boolean test = false;
-    private static ArrayList<String> listNames(File file1) throws IOException {
-        boolean checkDirectory = file1.isDirectory();
-        if (checkDirectory){
-            File[] children = file1.listFiles();
-            for (File child : children){
-                if (child.isDirectory())
-                    listNames(child);
-                else
-                    names.add(child.getName() + ",");
-            }
-            Collections.sort(names);
-        }
-        return names;
-    }
+
     static String[] put(String path1, String path2){
         test = true;
         testPaths = new String[]{path1, path2};
@@ -37,36 +23,41 @@ public class Directories {
         if (checkDirectory) {
             File[] children = file1.listFiles();
             for (File child : children) {
+                paths.add(child.getAbsolutePath());
                 if (child.isDirectory())
                     listPaths(child);
-                else
-                    paths.add(child.getAbsolutePath());
             }
         }
         return paths;
     }
+    private static ArrayList<String> listFilePaths(File file1) throws IOException {
+        boolean checkDirectory = file1.isDirectory();
+        if (checkDirectory) {
+            File[] children = file1.listFiles();
+            for (File child : children) {
+                if (child.isDirectory())
+                    listFilePaths(child);
+                else
+                    filePaths.add(child.getAbsolutePath());
+            }
+        }
+        return filePaths;
+    }
     private static String getNeededPaths(File file1) throws IOException {
+        paths = new ArrayList<>();
        ArrayList<String> fullPaths = listPaths(file1);
        String parentPath = file1.getAbsolutePath();
        String neededPaths = "";
         for (String path : fullPaths) {
-            neededPaths += path.substring(parentPath.length()-1);
+            neededPaths += path.substring(parentPath.length());
         }
         return neededPaths;
     }
-    private static String getNames(String path) throws IOException {
-        String allNames = "";
-        File file1 = new File(path);
-        ArrayList<String> names = listNames(file1);
-        for (String name : names){
-            allNames += names;
-        }
-        return allNames;
-    }
-    private static void fileCompare(File file1,File file2) throws IOException{
+
+    private static void fileCompare(File file1,File file2, Log log) throws IOException{
         System.out.println("Comparing two Files!....\n");
         if (file1.length() != file2.length()) {
-            System.out.println("The Files are not same!");
+            log.print("The Directories are not same!");
             return;
         }
         InputStream stream1 = new FileInputStream(file1);
@@ -84,11 +75,11 @@ public class Directories {
             }
         }
         if (same)
-            System.out.println("The Files are same!");
+            log.print("The Directories are  same!");
         else
-            System.out.println("The files are not same!");
+            log.print("The Directories are not same!");
     }
-    private static void dirCompare(ArrayList<String> paths1, ArrayList<String> paths2) throws IOException {
+    private static void dirCompare(ArrayList<String> paths1, ArrayList<String> paths2, Log log) throws IOException {
         boolean sameFiles = true;
         for (int i = 0; i < paths1.size(); i++){
             File file1 = new File(paths1.get(i));
@@ -107,9 +98,9 @@ public class Directories {
             }
         }
         if (sameFiles) {
-            System.out.println("The Directories are same!");
+            log.print("The Directories are same!");
         } else {
-            System.out.println("The Directories are not same!");
+            log.print("The Directories are not same!");
         }
     }
     private static String getPath(){
@@ -118,11 +109,11 @@ public class Directories {
         String path1 = scanner.nextLine();
         return path1;
     }
-    public static void compare() throws IOException {
+    public static void compare(Log log) throws IOException {
         File file2,file1;
         String path2,path1;
         if (test) {
-            String[] paths = testPaths;
+          //  String[] paths = testPaths;
             path1 = testPaths[0];
             path2 = testPaths[1];
         }else {
@@ -135,34 +126,38 @@ public class Directories {
         boolean checkType2 = file2.isDirectory();
         System.out.println("\nChecking File/Directory types..");
         if (checkType1 != checkType2) {
-            System.out.println("The File/Directory types are not same!");
+            log.print("The Directories are not same!");
             return;
         }
         if (checkType1 && checkType2) {
             System.out.println("Comparing Two Directories.... \n");
-            String s1 = getNames(path1);
-            String s2 = getNames(path2);
-            if (!s1.equals(s2)) {
-                System.out.println("The Directories not same!");
-                return;
-            }
             String p1 = getNeededPaths(file1);
             String p2 = getNeededPaths(file2);
             if (!p1.equals(p2)) {
-                System.out.println("The Directories not same!");
+                log.print("The Directories are not same!");
                 return;
             }
+            paths = new ArrayList<>();
             ArrayList<String> paths1 = listPaths(file1);
+            paths = new ArrayList<>();
             ArrayList<String> paths2 = listPaths(file2);
+            ArrayList<String> filePaths1 = listFilePaths(file1);
+            filePaths = new ArrayList<>();
+            ArrayList<String> filPaths2 = listFilePaths(file2);
             int len1 = paths1.size();
             int len2 = paths2.size();
             if (len1 != len2) {
-                System.out.println("The Directories are not same!");
+                log.print("The Directories are not same!");
                 return;
             }
-            dirCompare(paths1,paths2);
+            dirCompare(filePaths1,filPaths2,log);
         }
         else
-            fileCompare(file1,file2);
+            fileCompare(file1,file2,log);
+    }
+}
+class Log {
+    void print(String message){
+        System.out.println(message);
     }
 }
