@@ -12,10 +12,16 @@ class FileMakerTest {
     @Test
     void make() throws IOException {
 
-        long fileLength = FileMaker.make("/home/alinur/IdeaProjects/Junit_Mockito/src" +
-                "/test/resources/newTest.txt", 10);
-        long actual = new File("/home/alinur/IdeaProjects/Junit_Mockito/src" +
-                "/test/resources/newTest.txt").length();
-        assertTrue(fileLength == actual);
+        long filesToMake = FileMaker.make("/home/alinur/IdeaProjects/Junit_Mockito/src" +
+                "/test/resources/newTest.txt", 1000);
+        long actual = 1;
+        assertTrue(filesToMake== actual);
+    }
+    @Test
+    void makeTree() throws IOException {
+        int filesToMake = FileMaker.makeTree("/home/alinur/IdeaProjects/Junit_Mockito/src/" +
+                "test/resources/TestTree",15,150);
+        int actual = 150;
+        assertTrue(filesToMake == actual);
     }
 }
