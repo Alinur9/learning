@@ -1,8 +1,10 @@
 import java.io.*;
-import java.util.ArrayList;
 
 
 public class FileMaker {
+    private static String path;
+    private static File fileTodlt;
+    private static int fileCount;
 
     private static char[] characters(){
         char[] characters = new char[32001];
@@ -43,6 +45,7 @@ public class FileMaker {
         return successFiles;
     }
     public static int makeTree(String path, long sizeMb, int fileCount) throws IOException{
+        FileMaker.path = path;
         int successFiles = 0;
         File root = new File(path);
         boolean is30 = false;
@@ -64,6 +67,7 @@ public class FileMaker {
                 successFiles += makeDirectory(path + "/" + dirNameStr, sizeMb, 2);
             dirName++;
         }
+        fileTodlt = new File(FileMaker.path);
         successFiles += remainingFiles(is30,dirName,branchCount,fileCount,path,sizeMb);
         return successFiles;
     }
@@ -84,6 +88,29 @@ public class FileMaker {
             successFiles += makeDirectory(path + "/" + dirNameStr, sizeMb, remainingFiles);
         }
         return successFiles;
+    }
+    static void clear(File file){
+        if (file.isDirectory()){
+            for (File f : file.listFiles())
+                FileMaker.clear(f);
+        }
+        file.delete();
+    }
+    static int leafCount(File tree){
+        if (tree.isDirectory()) {
+            File[] fileArr = tree.listFiles();
+            int len = fileArr.length;
+            for (int i = 0; i < len; i++) {
+                File file1 = fileArr[i];
+                if (file1.isDirectory())
+                    leafCount(file1);
+                else
+                    fileCount++;
+            }
+        }
+        else
+            fileCount++;
+        return fileCount;
     }
 }
 
