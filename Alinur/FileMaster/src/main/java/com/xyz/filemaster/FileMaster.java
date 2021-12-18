@@ -7,6 +7,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
@@ -14,11 +16,19 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class FileMaster extends Application {
     @Override
     public void start(Stage stage) throws Exception {
+        Image image = new Image(new FileInputStream("C:\\Users\\Adnan\\IdeaProjects\\FileMaster\\src\\main\\" +
+                "resources\\com\\xyz\\filemaster\\xyz driveer.png"));
+        ImageView imageView = new ImageView(image);
+        imageView.setFitHeight(155);
+        imageView.setFitWidth(350);
+        imageView.setPreserveRatio(true);
+        Label startLbl = new Label(" Generate Files! ");
         Label fileCountLbl = new Label("How Many Files?");
         Label sizeMbLbl = new Label("Size of each files in MB");
         Label nameLbl = new Label("Name of your File");
@@ -29,10 +39,13 @@ public class FileMaster extends Application {
         Button gPathButton = new Button("Select");
         Label generateLbl = new Label("Generate Files.. ");
         Button generateButton = new Button("Generate");
-        Line line = new Line();
+        Line line = new Line(0,100,350,100);
         Label pathLbl1 = new Label("Path of your file1..");
         Label pathLbl2 = new Label("Path of your file2..");
-        Label dividerLbl = new Label("\n          Compare Files \n \n");
+        Label dividerLbl = new Label("  Compare Files! ");
+        Line line1 = new Line(0,100,350,100);
+        Line line2 = new Line(0,100,350,100);
+        Line line3 = new Line(0,100,350,100);
         Button cPathButton1 = new Button("Select");
         Button cPathButton2 = new Button("Select");
         Label confirmationLbl = new Label("Compare Files!");
@@ -65,12 +78,17 @@ public class FileMaster extends Application {
             compareHandle(cPath1arr[0],cPath2arr[0],cSuccessAlert,cFailureAlert);
         };
         compareButton.addEventFilter(MouseEvent.MOUSE_CLICKED,compareHandler);
-        VBox vBox = new VBox(fileCountLbl,setFileCount,sizeMbLbl,setMbSize,nameLbl,setName,pathLbl,gPathButton
-                ,generateLbl,generateButton,dividerLbl,pathLbl1,cPathButton1,pathLbl2,cPathButton2,confirmationLbl
+        VBox vBox = new VBox(imageView,line2,startLbl,line3,fileCountLbl,setFileCount,sizeMbLbl,setMbSize,nameLbl,setName,pathLbl,gPathButton
+                ,generateLbl,generateButton,line,dividerLbl,line1,pathLbl1,cPathButton1,pathLbl2,cPathButton2,confirmationLbl
         ,compareButton);
+        vBox.setSpacing(5);
         stage.setTitle("FileMaster.xyz");
-        Scene scene = new Scene(vBox,350,500);
+        Scene scene = new Scene(vBox,350,650);
         stage.setScene(scene);
+        stage.setMaxHeight(650);
+        stage.setMaxWidth(350);
+        stage.setMinHeight(650);
+        stage.setMinWidth(350);
         stage.show();
 
     }
