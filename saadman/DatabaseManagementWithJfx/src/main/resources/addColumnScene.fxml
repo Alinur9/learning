@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddColumnSceneController">
+   <children>
+      <Button fx:id="backBtn" layoutX="29.0" layoutY="22.0" mnemonicParsing="false" onAction="#setBackBtn" text="Done" />
+      <Label fx:id="tableNameLbl" layoutX="29.0" layoutY="87.0" text="Table Name : " />
+      <TextField fx:id="tableNameTextField" layoutX="28.0" layoutY="111.0" />
+      <Label fx:id="columnNameLbl" layoutX="28.0" layoutY="150.0" text="Column Name : " />
+      <TextField fx:id="columnNameTextField" layoutX="28.0" layoutY="175.0" />
+      <Button fx:id="addColumnBtn" layoutX="29.0" layoutY="221.0" mnemonicParsing="false" onAction="#setAddColumnBtn" text="Add Column" />
+
+   </children>
+</AnchorPane>
