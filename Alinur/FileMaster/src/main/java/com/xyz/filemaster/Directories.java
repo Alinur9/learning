@@ -168,3 +168,4 @@ class Log {
         System.out.println(message);
     }
 }
+

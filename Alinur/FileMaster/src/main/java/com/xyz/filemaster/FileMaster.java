@@ -2,6 +2,8 @@ package com.xyz.filemaster;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -10,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import javafx.stage.DirectoryChooser;
@@ -18,16 +21,31 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 
 public class FileMaster extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Image image = new Image(new FileInputStream("C:\\Users\\Adnan\\IdeaProjects\\FileMaster\\src\\main\\" +
-                "resources\\com\\xyz\\filemaster\\xyz driveer.png"));
-        ImageView imageView = new ImageView(image);
-        imageView.setFitHeight(155);
-        imageView.setFitWidth(350);
-        imageView.setPreserveRatio(true);
+        URL resource = getClass().getResource("/CoverpageCloudBlue.png");
+        ImageView imageView;
+
+        if(resource == null){
+            throw  new IOException("File not found");
+        }
+
+        try(InputStream stream =  resource.openStream()){
+
+            Image topImage = new Image(stream);
+            imageView = new ImageView(topImage);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw e;
+        }
+
+        imageView.setFitHeight(175);
+        imageView.setFitWidth(400);
+        imageView.setPreserveRatio(false);
         Label startLbl = new Label(" Generate Files! ");
         Label fileCountLbl = new Label("How Many Files?");
         Label sizeMbLbl = new Label("Size of each files in MB");
@@ -39,13 +57,13 @@ public class FileMaster extends Application {
         Button gPathButton = new Button("Select");
         Label generateLbl = new Label("Generate Files.. ");
         Button generateButton = new Button("Generate");
-        Line line = new Line(0,100,350,100);
-        Label pathLbl1 = new Label("Path of your file1..");
-        Label pathLbl2 = new Label("Path of your file2..");
+        Line line = new Line(0,100,400,100);
+        Label pathLbl1 = new Label("Path of your folder1..");
+        Label pathLbl2 = new Label("Path of your folder2..");
         Label dividerLbl = new Label("  Compare Files! ");
-        Line line1 = new Line(0,100,350,100);
-        Line line2 = new Line(0,100,350,100);
-        Line line3 = new Line(0,100,350,100);
+        Line line1 = new Line(0,100,400,100);
+        Line line2 = new Line(0,100,400,100);
+        Line line3 = new Line(0,100,400,100);
         Button cPathButton1 = new Button("Select");
         Button cPathButton2 = new Button("Select");
         Label confirmationLbl = new Label("Compare Files!");
@@ -80,15 +98,17 @@ public class FileMaster extends Application {
         compareButton.addEventFilter(MouseEvent.MOUSE_CLICKED,compareHandler);
         VBox vBox = new VBox(imageView,line2,startLbl,line3,fileCountLbl,setFileCount,sizeMbLbl,setMbSize,nameLbl,setName,pathLbl,gPathButton
                 ,generateLbl,generateButton,line,dividerLbl,line1,pathLbl1,cPathButton1,pathLbl2,cPathButton2,confirmationLbl
-        ,compareButton);
-        vBox.setSpacing(5);
+                ,compareButton);
+        vBox.setSpacing(7);
+ //       vBox.setPadding(new Insets(0, 0, 0, 50));
+   //     vBox.setAlignment(Pos.BASELINE_CENTER);
         stage.setTitle("FileMaster.xyz");
-        Scene scene = new Scene(vBox,350,650);
+        Scene scene = new Scene(vBox,400,850);
         stage.setScene(scene);
-        stage.setMaxHeight(650);
-        stage.setMaxWidth(350);
-        stage.setMinHeight(650);
-        stage.setMinWidth(350);
+        stage.setMaxHeight(850);
+        stage.setMaxWidth(400);
+        stage.setMinHeight(850);
+        stage.setMinWidth(400);
         stage.show();
 
     }
@@ -124,7 +144,7 @@ public class FileMaster extends Application {
     }
     private String cPathHandle(Stage stage){
         DirectoryChooser cPathChooser = new DirectoryChooser();
-        cPathChooser.setTitle("Select Files To Compare");
+        cPathChooser.setTitle("Select Folder To Compare");
         String initialPath = cPathChooser.showDialog(stage).getAbsolutePath();
         return initialPath;
     }
