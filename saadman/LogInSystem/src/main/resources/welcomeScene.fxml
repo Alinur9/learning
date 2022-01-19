@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -29,16 +31,21 @@
       </Label>
       <Separator layoutX="308.0" orientation="VERTICAL" prefHeight="91.0" prefWidth="0.0" />
       <Separator layoutX="622.0" orientation="VERTICAL" prefHeight="91.0" prefWidth="0.0" />
-      <Label layoutX="928.0" layoutY="15.0" prefHeight="31.0" prefWidth="41.0" style="-fx-background-color: #8c10b2;" textFill="#e1d4d4">
+      <Label layoutX="928.0" layoutY="-1.0" prefHeight="31.0" prefWidth="41.0" style="-fx-background-color: #8c10b2;" textFill="#e1d4d4">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="usernameLbl" layoutX="967.0" layoutY="15.0" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: #8c10b2;" textFill="#e1d4d4">
+      <Label fx:id="usernameLbl" layoutX="967.0" layoutY="-1.0" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: #8c10b2;" textFill="#e1d4d4">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Separator layoutX="945.0" orientation="VERTICAL" prefHeight="91.0" prefWidth="0.0" />
+      <ImageView fx:id="profilePictureImageView" fitHeight="43.0" fitWidth="60.0" layoutX="1040.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image fx:id="profilePic" url="@default-profile-picture.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

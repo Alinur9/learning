@@ -50,5 +50,10 @@
             <Image url="@return-button-png-34587.png" />
          </image>
       </ImageView>
+      <Button fx:id="uploadProfilePictureBtn" layoutX="50.0" layoutY="237.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" style="-fx-background-color: #696969;" text="Upload Profile Picture" textFill="WHITE" onAction="#setUploadProfilePictureBtn">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

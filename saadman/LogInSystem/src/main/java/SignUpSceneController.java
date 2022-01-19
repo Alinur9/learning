@@ -24,8 +24,8 @@ public class SignUpSceneController {
     Button logInBtn;
     @FXML
     void setLogInBtn() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LogInScene.fxml"));
-        Main.stg.setScene(new Scene(root));
+        Main main = new Main();
+        main.setScene("LoginScene.fxml");
     }
     @FXML
     void setSignUpBtn() throws SQLException {

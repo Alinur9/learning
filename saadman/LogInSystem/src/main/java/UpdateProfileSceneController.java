@@ -1,3 +1,4 @@
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -6,9 +7,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
@@ -33,7 +36,8 @@ public class UpdateProfileSceneController implements Initializable {
     Label nothingToShowHereLbl;
     @FXML
     ImageView backBtnImg;
-
+    @FXML
+    Button uploadProfilePictureBtn;
 
     Main main = new Main();
 
@@ -58,6 +62,8 @@ public class UpdateProfileSceneController implements Initializable {
         updateBtn.setVisible(true);
         addressTextField.setVisible(true);
         nothingToShowHereLbl.setVisible(false);
+        uploadProfilePictureBtn.setVisible(false);
+
     }
     @FXML
     void setUpdateBtn() throws SQLException {
@@ -72,6 +78,18 @@ public class UpdateProfileSceneController implements Initializable {
         alert.setContentText("Updated Profile. Please Refresh. ");
         alert.show();
 
+    }
+    @FXML
+    void setUploadProfilePictureBtn() throws FileNotFoundException, SQLException {
+        FileChooser fc = new FileChooser();
+        InputStream fin = new FileInputStream(fc.showOpenDialog(Main.stg).getAbsoluteFile());
+        PreparedStatement ps = Main.connect().prepareStatement("INSERT INTO userProfilePictures(username,pic) VALUES (?,?)");
+        ps.setString(1,LoginSceneController.loggedInUser);
+        ps.setBinaryStream(2,fin);
+        ps.execute();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Profile Picture Uploaded.");
+        alert.show();
     }
 
 }

@@ -14,7 +14,9 @@ import java.sql.Statement;
 
 
 public class LoginSceneController {
+    
     Alert alert = new Alert(Alert.AlertType.NONE);
+    static String loggedInUser = "";
     ResultSet rs;
     @FXML
     TextField usernameTextField;
@@ -26,7 +28,7 @@ public class LoginSceneController {
     Button signUpBtn;
 
     @FXML
-    void setLoginBtn() throws SQLException {
+    void setLoginBtn() throws SQLException, IOException {
         if(usernameTextField.getText().equals("") || passwordTextField.getText().equals(""))
         {
             alert.setContentText("Field cannot be empty");
@@ -39,9 +41,9 @@ public class LoginSceneController {
             rs = st.executeQuery("SELECT * FROM users WHERE username='"+usernameTextField.getText()+"' AND password='"+passwordTextField.getText()+"'");
             if(rs.next())
             {
-                alert.setAlertType(Alert.AlertType.INFORMATION);
-                alert.setContentText("Logged In Successfully");
-                alert.show();
+                loggedInUser = usernameTextField.getText();
+                Main main = new Main();
+                main.setScene("welcomeScene.fxml");
             }
             else
             {
@@ -53,8 +55,8 @@ public class LoginSceneController {
     }
     @FXML
     void setSignUpBtn() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("SignUpScene2.fxml"));
-        Main.stg.setScene(new Scene(root));
+        Main main = new Main();
+        main.setScene("SignUpScene2.fxml");
     }
 
 }

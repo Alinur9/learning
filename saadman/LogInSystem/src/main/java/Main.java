@@ -5,36 +5,43 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.Locale;
 
 public class Main extends Application {
     static Stage stg;
     @Override
     public void start(Stage primaryStage) throws Exception {
+        if(!doesTableExist("users"))createTable();
+        if(!doesTableExist("userinfo"))createuserinfoTable();
+        if(!doesTableExist("userProfilePictures"))createProfilePictureTable();
         stg = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("SignUpScene2.fxml"));
-        stg.setScene(new Scene(root));
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Main.class.getResource("SignUpScene2.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stg.setScene(scene);
         stg.show();
     }
-//    public void setScene(String fxmlPath) throws IOException {
-//        Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
-//        Scene scene = new Scene(root);
-//        stg.setScene(scene);
-//    }
+    public void setScene(String fxmlPath) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Main.class.getResource(fxmlPath));
+        Scene scene = new Scene(fxmlLoader.load());
+        stg.setScene(scene);
+    }
     public static Connection connect() throws SQLException {
         final String JDBC_URL = "jdbc:derby:CreatingJavaDB;create=true";
         Connection conn = DriverManager.getConnection(JDBC_URL);
-        if(conn!=null)
+        if(conn==null)
         {
-            System.out.println("Connected Successfully.");
-        }
-        else {
             System.out.println("Failed to connect. ");
         }
         return conn;
+    }
+    public static boolean doesTableExist(String tableName) throws SQLException {
+        DatabaseMetaData databaseMetaData = connect().getMetaData();
+        ResultSet rs = databaseMetaData.getTables(null,null,tableName.toUpperCase(Locale.ROOT),null);
+        if(rs.next()) return true;
+        else return false;
     }
     public static void createTable() throws SQLException {
         Statement st =connect().createStatement();
@@ -44,6 +51,27 @@ public class Main extends Application {
         Statement st = connect().createStatement();
         String q = "INSERT INTO users(username,email,password) VALUES ('"+username+"','"+email+"','"+password+"')";
         st.execute(q);
+    }
+    public void addUserInfo(String userName,String fname,String lname,String age,String address,String college) throws SQLException {
+        Statement st = connect().createStatement();
+        if(!doesTableExist("userinfo"))
+        {
+            st.execute("CREATE TABLE userinfo(username VARCHAR(255),fname VARCHAR(255),lname VARCHAR (255),age VARCHAR(255),address VARCHAR(255),colleage VARCHAR(255))");
+        }
+        String q = "INSERT INTO userinfo(username,fname,lname,age,address,colleage) VALUES ('"+userName+"','"+fname+"','"+lname+"','"+age+"','"+address+"','"+college+"')";
+        st.execute(q);
+    }
+    public void createuserinfoTable() throws SQLException {
+        Statement st = connect().createStatement();
+        st.execute("CREATE TABLE userinfo(username VARCHAR(255),fname VARCHAR(255),lname VARCHAR (255),age VARCHAR(255),address VARCHAR(255),colleage VARCHAR(255))");
+    }
+    public void createProfilePictureTable() throws SQLException {
+        Statement st = connect().createStatement();
+        st.execute("CREATE TABLE userProfilePictures(username VARCHAR(255),pic BLOB(16M))");
+    }
+    public void addProfilePicturesToDB()
+    {
+
     }
     public static void main(String[] args) {
         launch(args);
