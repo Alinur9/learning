@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f51f295-fa4e-46f1-9ffc-ab02ce618889" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/leetcode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/CalculateAmountPaidInTaxes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/CheckIfMatrixIsXMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/CountAsterisks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/FindTheDisValBetwTowArr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/FirstUniqueCharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/GreatestEnglishLetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MajorityElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MergeNode0.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/NumberOfStudentUnableToEat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SortIntAscendByNumOfBits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SpecialArrayWithXElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/StrongPasswordCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SuccessfulPairsOfSpellsNPotions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/UnrechebleGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/leetcode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/test/java/com/hridoy/CountIntegerWithEvenDigitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/test/java/com/hridoy/SpecialArrayWithXElementsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/src/test/java/com/hridoy/StrongPasswordCheckTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hridoy/leetcode/target/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/AddingParenthesesToExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/AddingParenthesesToExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/BestTimeTOBuyandSellStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/BestTimeTOBuyandSellStock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/BinaryAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/BinaryAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/BinaryCodesOfSizeK.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/BinaryCodesOfSizeK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/BinaryGap.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/BinaryGap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/BinarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/BinaryWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/BinaryWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/CalculatingDigitSumOfString.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/CalculatingDigitSumOfString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/CellsInRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/CellsInRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/ClimbingStairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/ClimbingStairs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/ConstructTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/ConstructTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/CountEualsnDivisible.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/CountEualsnDivisible.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/CountIntegerWithEvenDigit.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/CountIntegerWithEvenDigit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/CountPrefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/CountPrefix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/CountPrefixesOfGivenString.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/CountPrefixesOfGivenString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/DiffOFTwoArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/DiffOFTwoArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/DstinctIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/DstinctIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/DuplicateZeros.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/DuplicateZeros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/FindClosetNumToZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/FindClosetNumToZero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/FindMinimumRounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/FindMinimumRounds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/FindResultafterRmvAnagrams.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/FindResultafterRmvAnagrams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/FindTriangularSumOfArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/FindTriangularSumOfArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/FirstUniqueCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/FirstUnqChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/FirstUnqChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/FllipingAnImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/FllipingAnImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/GoatLatin.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/GoatLatin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/InsertionBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/InsertionBST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/InterSectionOfMulOfArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/InterSectionOfMulOfArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/IntersectionOF2DArraysWays2.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/IntersectionOF2DArraysWays2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/KIntegersWithMinSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/KIntegersWithMinSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/Kth_DistinctString.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/Kth_DistinctString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/LargeNumAfterDgtSwaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/LargeNumAfterDgtSwaps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/Largest3.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/Largest3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/LeastNumberOfUniqueInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/LeastNumberOfUniqueInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/LengthOfLastWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/LengthOfLastWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/LexicographicalNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/LexicographicalNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/MaximumProductDiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MaximumProductDiff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/MaximunSubarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MaximunSubarray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/MergeNode0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/MinMaxGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MinMaxGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/MinimumBitFlips.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MinimumBitFlips.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/MinimumMovestoConvertString.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MinimumMovestoConvertString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/MinimumNumOfParentheses.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MinimumNumOfParentheses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/MinimumNumberofOperationstoConvertTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MinimumNumberofOperationstoConvertTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/MissingPositiveInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/MissingPositiveInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/NumberHasEqualDigit.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/NumberHasEqualDigit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/NumberOfWayBuy.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/NumberOfWayBuy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/PasclsTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/PasclsTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/PasclsTriangleByIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/PasclsTriangleByIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/PlusOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/PlusOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/RearrangeChracters.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/RearrangeChracters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/RemoveDigit.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/RemoveDigit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/RemovingMinNumOfMagicBeans.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/RemovingMinNumOfMagicBeans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/ReplaceAllConsecutiveRepeatingCharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/ReplaceAllConsecutiveRepeatingCharacters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/ReplaceAllDigitsChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/ReplaceAllDigitsChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/ReversePrefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/ReversePrefix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/SecondLargestDigit.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SecondLargestDigit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/SenderWithLargestWordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SenderWithLargestWordCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/SingleNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SingleNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/SlowestKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SlowestKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/Sqrt.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/Sqrt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/SubStringOfSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SubStringOfSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/SuffleString.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SuffleString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/SumOf1DArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/SumOf1DArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/TrNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/TrNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/ValidPalindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/ValidPalindrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/ValidParentheses.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/ValidParentheses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/VowelOfSubString.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/VowelOfSubString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hridoy/leetcode/weeklyContest01.java" beforeDir="false" afterPath="$PROJECT_DIR$/hridoy/leetcode/src/main/java/com/hridoy/weeklyContest01.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AKExrojC2LQn0MW6pTccJ7pIXq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/xyz-learning&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f51f295-fa4e-46f1-9ffc-ab02ce618889" name="Changes" comment="" />
+      <created>1654750125591</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654750125591</updated>
+    </task>
+    <servers />
+  </component>
+</project>
