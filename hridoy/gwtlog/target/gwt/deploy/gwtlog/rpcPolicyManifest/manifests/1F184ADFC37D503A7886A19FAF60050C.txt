@@ -1,0 +1,2 @@
+serviceClass: com.xyz.client.GreetingService
+path: 3F2093CC500C50915645923BBFA4D5BF.gwt.rpc

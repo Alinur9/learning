@@ -1,0 +1,9 @@
+com\xyz\client\TextField.class
+com\xyz\client\GreetingServiceAsync.class
+com\xyz\client\gwtlog.class
+com\xyz\client\Box.class
+com\xyz\client\PasswordField.class
+com\xyz\client\GreetingService.class
+com\xyz\server\GreetingServiceImpl.class
+com\xyz\shared\FieldVerifier.class
+com\xyz\client\LoginUi.class
