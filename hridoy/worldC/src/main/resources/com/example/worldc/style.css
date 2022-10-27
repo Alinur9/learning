@@ -1,0 +1,9 @@
+
+  .btnclass{
+  -fx-border-color:White;
+  -fx-background-color : transparent;
+  -fx-border-width:1;
+  }
+ .btnclass:hover{
+  -fx-background-color : #1B1B1B;
+  }
