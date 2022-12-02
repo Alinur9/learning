@@ -5,6 +5,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 import com.xyz.shared.LoginRequest;
 import com.xyz.shared.LoginResponse;
+import com.xyz.shared.MatchForVoting;
 
 public class LoginUi implements IsWidget {
     private final Box box1 = new Box();
@@ -13,7 +14,8 @@ public class LoginUi implements IsWidget {
     TextField username = new TextField("Username","");
     PasswordField password = new PasswordField("Password","");
     private ClickHandler topBarHandler;
-    private ClickHandler testHandler;
+    private ClickHandler logInHandler;
+
     public LoginUi(GreetingServiceAsync greetingService) {
         this.service = greetingService;
         Box box2 = new Box();
@@ -50,6 +52,8 @@ public class LoginUi implements IsWidget {
         LoginRequest request = new LoginRequest();
         request.password= password.getText();
         request.username = username.getText();
+
+
         service.login(request, new AsyncCallback<LoginResponse>() {
             @Override
             public void onFailure(Throwable throwable) {
@@ -58,13 +62,19 @@ public class LoginUi implements IsWidget {
 
             @Override
             public void onSuccess(LoginResponse loginResponse) {
-                username.setText("Login success: " + loginResponse.successful);
+                if (loginResponse.successful) {
+                    if (logInHandler != null){
+                        logInHandler.onClick(clickEvent);
+                    }
+                }else {
+                    username.setText(loginResponse.errorMsg);
+                }
             }
         });
 
-        if (!username.getText().isEmpty() && !username.getText().contains(" ") && !password.getText().isEmpty() && !password.getText().contains(" ")){
-            this.testHandler.onClick(clickEvent);
-        }
+    }
+    public void addSwitchToLogInHandler(ClickHandler handler){
+        this.logInHandler = handler;
     }
 
     private void goToTopBar(ClickEvent clickEvent) {
@@ -73,6 +83,8 @@ public class LoginUi implements IsWidget {
             topBarHandler.onClick(clickEvent);
         }
     }
+
+
     public void addSwitchToCancelHandler(ClickHandler handler){
         this.topBarHandler = handler;
     }

@@ -47,6 +47,14 @@ color:white;
        width:25vw;
        background-image:url("mini2.png");
 }
+.match-ui{
+        margin-top:-500px!important;
+           margin-left:200px!important;
+           height:68vh;
+              width:75vw;
+              background-image:url("mini2.png");
+
+     }
 .sign-up{
     margin-top:-500px!important;
     margin-left:470px!important;
@@ -132,3 +140,4 @@ margin-left:150px;
    .forget-pass:active{
      transform: scale(0.98);
      }
+

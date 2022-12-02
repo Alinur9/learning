@@ -1,5 +1,5 @@
 # Module com.xyz.gwtlogJUnit.JUnit
 # RPC service class, partial path of RPC policy file
 com.google.gwt.logging.shared.RemoteLoggingService, 27350931B400814CCAC8AFDA204E31E2.gwt.rpc
-com.xyz.client.GreetingService, 87B5F438DEFC58D7873AA52A0506F294.gwt.rpc
 com.google.gwt.junit.client.impl.JUnitHost, 96393FD5B90EFD77EACE5B4F721C3D47.gwt.rpc
+com.xyz.client.GreetingService, ABCB46C4CA14ACB9E2F7A10F06FDC171.gwt.rpc

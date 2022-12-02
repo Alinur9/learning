@@ -9,16 +9,20 @@ public class gwtlog implements EntryPoint {
     RootPanel root = RootPanel.get();
 
     LoginUi loginUi = new LoginUi(greetingService);
-    SignupUi signupUi = new SignupUi();
+    MatchListUi matchList = new MatchListUi(greetingService);
+    SignupUi signupUi = new SignupUi(greetingService);
+    WinnerTeamUi winnerTeamUi = new WinnerTeamUi(greetingService);
     TopBar topBar = new TopBar();
 
     topBar.addSwitchToSignupHandler(e->{
       root.remove(loginUi);
+      root.remove(matchList);
       root.add(signupUi);
     });
 
     topBar.addSwitchToLoginHandler(e->{
       root.remove(signupUi);
+      root.remove(matchList);
       root.add(loginUi);
     });
 
@@ -30,9 +34,36 @@ public class gwtlog implements EntryPoint {
       root.remove(signupUi);
     });
 
+    loginUi.addSwitchToLogInHandler(e->{
+      root.remove(loginUi);
+      root.add(matchList);
+            });
+    signupUi.addSwitchToSignUpHandler(e->{
+      root.remove(signupUi);
+      root.add(matchList);
+    });
+    matchList.addSwitchToLogoutHandler(e->{
+      root.remove(matchList);
+      root.remove(winnerTeamUi);
+    });
+
+    matchList.addSwitchToWinnerHandler(e->{
+      root.remove(matchList);
+      root.add(winnerTeamUi);
+    });
+    winnerTeamUi.addSwitchToLogoutHandler(e->{
+      root.remove(winnerTeamUi);
+    });
+
+    winnerTeamUi.addSwitchToMatchListUi(e->{
+      root.remove(winnerTeamUi);
+      root.add(matchList);
+    });
+
 
     root.add(topBar);
+    
 
-   // root.add(loginUi);
+    // root.add(loginUi);
   }
 }

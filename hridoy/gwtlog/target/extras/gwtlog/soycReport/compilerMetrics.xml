@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metrics version="1" >
- <module elapsed="20714" >
-  <sources count="3352">
+ <module elapsed="18920" >
+  <sources count="3357">
    <source name="com/google/gwt/animation/client/Animation.java" />
    <source name="com/google/gwt/animation/client/AnimationScheduler.java" />
    <source name="com/google/gwt/animation/client/AnimationSchedulerImplStandard.java" />
@@ -2998,15 +2998,20 @@
    <source name="com/xyz/client/GreetingService.java" />
    <source name="com/xyz/client/GreetingServiceAsync.java" />
    <source name="com/xyz/client/LoginUi.java" />
+   <source name="com/xyz/client/MatchListUi.java" />
    <source name="com/xyz/client/PasswordField.java" />
    <source name="com/xyz/client/SignupUi.java" />
    <source name="com/xyz/client/TextField.java" />
    <source name="com/xyz/client/TopBar.java" />
+   <source name="com/xyz/client/WinnerTeamUi.java" />
    <source name="com/xyz/client/gwtlog.java" />
    <source name="com/xyz/shared/FieldVerifier.java" />
    <source name="com/xyz/shared/LoginRequest.java" />
    <source name="com/xyz/shared/LoginResponse.java" />
+   <source name="com/xyz/shared/MatchForVoting.java" />
    <source name="com/xyz/shared/User.java" />
+   <source name="com/xyz/shared/VotingRequest.java" />
+   <source name="com/xyz/shared/VotingResponse.java" />
    <source name="java/beans/Beans.java" />
    <source name="java/io/BufferedWriter.java" />
    <source name="java/io/ByteArrayInputStream.java" />
@@ -3355,7 +3360,7 @@
    <source name="javax/validation/spi/ConfigurationState.java" />
    <source name="javax/validation/spi/ValidationProvider.java" />
   </sources>
-  <types kind="initial" count="4056">
+  <types kind="initial" count="4061">
    <type name="com.google.gwt.animation.client.Animation" />
    <type name="com.google.gwt.animation.client.AnimationScheduler" />
    <type name="com.google.gwt.animation.client.AnimationScheduler.AnimationCallback" />
@@ -6853,15 +6858,20 @@
    <type name="com.xyz.client.GreetingService" />
    <type name="com.xyz.client.GreetingServiceAsync" />
    <type name="com.xyz.client.LoginUi" />
+   <type name="com.xyz.client.MatchListUi" />
    <type name="com.xyz.client.PasswordField" />
    <type name="com.xyz.client.SignupUi" />
    <type name="com.xyz.client.TextField" />
    <type name="com.xyz.client.TopBar" />
+   <type name="com.xyz.client.WinnerTeamUi" />
    <type name="com.xyz.client.gwtlog" />
    <type name="com.xyz.shared.FieldVerifier" />
    <type name="com.xyz.shared.LoginRequest" />
    <type name="com.xyz.shared.LoginResponse" />
+   <type name="com.xyz.shared.MatchForVoting" />
    <type name="com.xyz.shared.User" />
+   <type name="com.xyz.shared.VotingRequest" />
+   <type name="com.xyz.shared.VotingResponse" />
    <type name="java.beans.Beans" />
    <type name="java.io.BufferedWriter" />
    <type name="java.io.ByteArrayInputStream" />
@@ -7415,8 +7425,22 @@
   </types>
  </module>
  <precompilations>
-  <precompilation base="0" ids="0,1" elapsed="22314" >
-   <types kind="ast" count="795">
+  <precompilation base="0" ids="0,1" elapsed="22559" >
+   <types kind="ast" count="1024">
+    <type name="com.google.gwt.animation.client.Animation" />
+    <type name="com.google.gwt.animation.client.Animation$1" />
+    <type name="com.google.gwt.animation.client.AnimationScheduler" />
+    <type name="com.google.gwt.animation.client.AnimationScheduler$AnimationHandle" />
+    <type name="com.google.gwt.animation.client.AnimationScheduler$AnimationSupportDetector" />
+    <type name="com.google.gwt.animation.client.AnimationSchedulerImplStandard" />
+    <type name="com.google.gwt.animation.client.AnimationSchedulerImplStandard$1" />
+    <type name="com.google.gwt.animation.client.AnimationSchedulerImplTimer" />
+    <type name="com.google.gwt.animation.client.AnimationSchedulerImplTimer$1" />
+    <type name="com.google.gwt.animation.client.AnimationSchedulerImplTimer$AnimationHandleImpl" />
+    <type name="com.google.gwt.cell.client.AbstractCell" />
+    <type name="com.google.gwt.cell.client.AbstractSafeHtmlCell" />
+    <type name="com.google.gwt.cell.client.Cell$Context" />
+    <type name="com.google.gwt.cell.client.TextCell" />
     <type name="com.google.gwt.core.client.CodeDownloadException" />
     <type name="com.google.gwt.core.client.CodeDownloadException$Reason" />
     <type name="com.google.gwt.core.client.CodeDownloadException$Reason$Map" />
@@ -7427,6 +7451,7 @@
     <type name="com.google.gwt.core.client.JavaScriptException" />
     <type name="com.google.gwt.core.client.JavaScriptObject" />
     <type name="com.google.gwt.core.client.JsArray" />
+    <type name="com.google.gwt.core.client.JsArrayInteger" />
     <type name="com.google.gwt.core.client.JsArrayString" />
     <type name="com.google.gwt.core.client.JsDate" />
     <type name="com.google.gwt.core.client.JsonUtils" />
@@ -7469,6 +7494,24 @@
     <type name="com.google.gwt.core.shared.SerializableThrowable" />
     <type name="com.google.gwt.core.shared.impl.JsLogger" />
     <type name="com.google.gwt.core.shared.impl.ThrowableTypeResolver" />
+    <type name="com.google.gwt.dom.builder.shared.AbstractElementBuilderBase" />
+    <type name="com.google.gwt.dom.builder.shared.ElementBuilderFactory" />
+    <type name="com.google.gwt.dom.builder.shared.ElementBuilderImpl" />
+    <type name="com.google.gwt.dom.builder.shared.ElementBuilderImpl$FastPeekStack" />
+    <type name="com.google.gwt.dom.builder.shared.ElementBuilderImpl$StackNode" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlBuilderFactory" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlBuilderImpl" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlDivBuilder" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlElementBuilder" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlElementBuilderBase" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlInputBuilder" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlLIBuilder" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlOptionBuilder" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlSpanBuilder" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlStylesBuilder" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlTableCellBuilder" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlTableRowBuilder" />
+    <type name="com.google.gwt.dom.builder.shared.HtmlTableSectionBuilder" />
     <type name="com.google.gwt.dom.client.BodyElement" />
     <type name="com.google.gwt.dom.client.ButtonElement" />
     <type name="com.google.gwt.dom.client.DOMImpl" />
@@ -7481,9 +7524,14 @@
     <type name="com.google.gwt.dom.client.Document" />
     <type name="com.google.gwt.dom.client.Element" />
     <type name="com.google.gwt.dom.client.EventTarget" />
+    <type name="com.google.gwt.dom.client.HeadElement" />
+    <type name="com.google.gwt.dom.client.ImageElement" />
     <type name="com.google.gwt.dom.client.InputElement" />
     <type name="com.google.gwt.dom.client.NativeEvent" />
     <type name="com.google.gwt.dom.client.Node" />
+    <type name="com.google.gwt.dom.client.NodeList" />
+    <type name="com.google.gwt.dom.client.OptionElement" />
+    <type name="com.google.gwt.dom.client.SelectElement" />
     <type name="com.google.gwt.dom.client.SpanElement" />
     <type name="com.google.gwt.dom.client.Style" />
     <type name="com.google.gwt.dom.client.Style$BorderStyle" />
@@ -7658,6 +7706,17 @@
     <type name="com.google.gwt.dom.client.Style$WhiteSpace$4" />
     <type name="com.google.gwt.dom.client.Style$WhiteSpace$5" />
     <type name="com.google.gwt.dom.client.Style$WhiteSpace$Map" />
+    <type name="com.google.gwt.dom.client.StyleElement" />
+    <type name="com.google.gwt.dom.client.StyleInjector" />
+    <type name="com.google.gwt.dom.client.StyleInjector$1" />
+    <type name="com.google.gwt.dom.client.StyleInjector$StyleInjectorImpl" />
+    <type name="com.google.gwt.dom.client.TableCellElement" />
+    <type name="com.google.gwt.dom.client.TableColElement" />
+    <type name="com.google.gwt.dom.client.TableElement" />
+    <type name="com.google.gwt.dom.client.TableRowElement" />
+    <type name="com.google.gwt.dom.client.TableSectionElement" />
+    <type name="com.google.gwt.dom.client.TextAreaElement" />
+    <type name="com.google.gwt.dom.client.Touch" />
     <type name="com.google.gwt.event.dom.client.ClickEvent" />
     <type name="com.google.gwt.event.dom.client.DomEvent" />
     <type name="com.google.gwt.event.dom.client.DomEvent$Type" />
@@ -7668,8 +7727,17 @@
     <type name="com.google.gwt.event.dom.client.MouseEvent" />
     <type name="com.google.gwt.event.dom.client.PrivateMap" />
     <type name="com.google.gwt.event.dom.client.PrivateMap$JsMap" />
+    <type name="com.google.gwt.event.dom.client.TouchCancelEvent" />
+    <type name="com.google.gwt.event.dom.client.TouchEndEvent" />
+    <type name="com.google.gwt.event.dom.client.TouchEvent" />
+    <type name="com.google.gwt.event.dom.client.TouchEvent$TouchSupportDetector" />
+    <type name="com.google.gwt.event.dom.client.TouchEvent$TouchSupportDetectorNo" />
+    <type name="com.google.gwt.event.dom.client.TouchMoveEvent" />
+    <type name="com.google.gwt.event.dom.client.TouchStartEvent" />
     <type name="com.google.gwt.event.logical.shared.AttachEvent" />
     <type name="com.google.gwt.event.logical.shared.CloseEvent" />
+    <type name="com.google.gwt.event.logical.shared.ResizeEvent" />
+    <type name="com.google.gwt.event.logical.shared.ValueChangeEvent" />
     <type name="com.google.gwt.event.shared.GwtEvent" />
     <type name="com.google.gwt.event.shared.GwtEvent$Type" />
     <type name="com.google.gwt.event.shared.HandlerManager" />
@@ -7735,13 +7803,43 @@
     <type name="com.google.gwt.lang.Stats" />
     <type name="com.google.gwt.lang.Util" />
     <type name="com.google.gwt.lang.com_00046xyz_00046gwtlog__EntryMethodHolder" />
+    <type name="com.google.gwt.regexp.shared.MatchResult" />
     <type name="com.google.gwt.regexp.shared.RegExp" />
     <type name="com.google.gwt.regexp.shared.SplitResult" />
+    <type name="com.google.gwt.resources.client.ImageResource$RepeatStyle" />
+    <type name="com.google.gwt.resources.client.ImageResource$RepeatStyle$Map" />
+    <type name="com.google.gwt.resources.client.impl.ImageResourcePrototype" />
+    <type name="com.google.gwt.resources.client.impl.ImageResourcePrototype$Bundle" />
+    <type name="com.google.gwt.safecss.shared.SafeStylesBuilder" />
+    <type name="com.google.gwt.safecss.shared.SafeStylesHostedModeUtils" />
+    <type name="com.google.gwt.safecss.shared.SafeStylesString" />
+    <type name="com.google.gwt.safecss.shared.SafeStylesUtils" />
+    <type name="com.google.gwt.safecss.shared.SafeStylesUtils$Impl" />
+    <type name="com.google.gwt.safehtml.shared.OnlyToBeUsedInGeneratedCodeStringBlessedAsSafeHtml" />
+    <type name="com.google.gwt.safehtml.shared.SafeHtmlBuilder" />
     <type name="com.google.gwt.safehtml.shared.SafeHtmlString" />
     <type name="com.google.gwt.safehtml.shared.SafeHtmlUtils" />
+    <type name="com.google.gwt.safehtml.shared.SafeUriHostedModeUtils" />
+    <type name="com.google.gwt.safehtml.shared.SafeUriString" />
+    <type name="com.google.gwt.safehtml.shared.UriUtils" />
     <type name="com.google.gwt.text.shared.AbstractRenderer" />
+    <type name="com.google.gwt.text.shared.SimpleSafeHtmlRenderer" />
     <type name="com.google.gwt.text.shared.testing.PassthroughParser" />
     <type name="com.google.gwt.text.shared.testing.PassthroughRenderer" />
+    <type name="com.google.gwt.touch.client.DefaultMomentum" />
+    <type name="com.google.gwt.touch.client.Momentum$State" />
+    <type name="com.google.gwt.touch.client.Point" />
+    <type name="com.google.gwt.touch.client.TouchScroller" />
+    <type name="com.google.gwt.touch.client.TouchScroller$1" />
+    <type name="com.google.gwt.touch.client.TouchScroller$2" />
+    <type name="com.google.gwt.touch.client.TouchScroller$3" />
+    <type name="com.google.gwt.touch.client.TouchScroller$4" />
+    <type name="com.google.gwt.touch.client.TouchScroller$5" />
+    <type name="com.google.gwt.touch.client.TouchScroller$6" />
+    <type name="com.google.gwt.touch.client.TouchScroller$MomentumCommand" />
+    <type name="com.google.gwt.touch.client.TouchScroller$MomentumCommand$1" />
+    <type name="com.google.gwt.touch.client.TouchScroller$MomentumTouchRemovalCommand" />
+    <type name="com.google.gwt.touch.client.TouchScroller$TemporalPoint" />
     <type name="com.google.gwt.typedarrays.client.ArrayBufferNative" />
     <type name="com.google.gwt.typedarrays.client.ArrayBufferViewNative" />
     <type name="com.google.gwt.typedarrays.client.DataViewNative" />
@@ -7753,6 +7851,68 @@
     <type name="com.google.gwt.typedarrays.client.Uint16ArrayNative" />
     <type name="com.google.gwt.typedarrays.client.Uint32ArrayNative" />
     <type name="com.google.gwt.typedarrays.client.Uint8ArrayNative" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable$1" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable$2" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable$3" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable$4" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable$CellTableKeyboardSelectionHandler" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable$Impl" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable$ImplMozilla" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable$ImplTrident" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTableBuilder" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable_TemplateImpl" />
+    <type name="com.google.gwt.user.cellview.client.AbstractHasData" />
+    <type name="com.google.gwt.user.cellview.client.AbstractHasData$1" />
+    <type name="com.google.gwt.user.cellview.client.AbstractHasData$DefaultKeyboardSelectionHandler" />
+    <type name="com.google.gwt.user.cellview.client.AbstractHasData$RedrawEvent" />
+    <type name="com.google.gwt.user.cellview.client.AbstractHasData$View" />
+    <type name="com.google.gwt.user.cellview.client.AbstractHasData$View$1" />
+    <type name="com.google.gwt.user.cellview.client.AbstractHasData$View$2" />
+    <type name="com.google.gwt.user.cellview.client.AbstractHeaderOrFooterBuilder" />
+    <type name="com.google.gwt.user.cellview.client.AbstractHeaderOrFooterBuilder$TwoWayHashMap" />
+    <type name="com.google.gwt.user.cellview.client.CellBasedWidgetImpl" />
+    <type name="com.google.gwt.user.cellview.client.CellBasedWidgetImplStandard" />
+    <type name="com.google.gwt.user.cellview.client.CellBasedWidgetImplStandardBase" />
+    <type name="com.google.gwt.user.cellview.client.CellTable" />
+    <type name="com.google.gwt.user.cellview.client.CellTable$ResourcesAdapter" />
+    <type name="com.google.gwt.user.cellview.client.CellTable$StyleAdapter" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator$1" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator$cellTableFooterBackgroundInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator$cellTableHeaderBackgroundInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator$cellTableLoadingInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator$cellTableSelectedBackgroundInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator$cellTableSortAscendingInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator$cellTableSortDescendingInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator$cellTableStyleInitializer" />
+    <type name="com.google.gwt.user.cellview.client.Column" />
+    <type name="com.google.gwt.user.cellview.client.Column$1" />
+    <type name="com.google.gwt.user.cellview.client.ColumnSortEvent" />
+    <type name="com.google.gwt.user.cellview.client.ColumnSortEvent$AsyncHandler" />
+    <type name="com.google.gwt.user.cellview.client.ColumnSortEvent$ListHandler" />
+    <type name="com.google.gwt.user.cellview.client.ColumnSortEvent$ListHandler$1" />
+    <type name="com.google.gwt.user.cellview.client.ColumnSortList" />
+    <type name="com.google.gwt.user.cellview.client.ColumnSortList$ColumnSortInfo" />
+    <type name="com.google.gwt.user.cellview.client.DefaultCellTableBuilder" />
+    <type name="com.google.gwt.user.cellview.client.DefaultHeaderOrFooterBuilder" />
+    <type name="com.google.gwt.user.cellview.client.HasDataPresenter" />
+    <type name="com.google.gwt.user.cellview.client.HasDataPresenter$1" />
+    <type name="com.google.gwt.user.cellview.client.HasDataPresenter$2" />
+    <type name="com.google.gwt.user.cellview.client.HasDataPresenter$DefaultState" />
+    <type name="com.google.gwt.user.cellview.client.HasDataPresenter$PendingState" />
+    <type name="com.google.gwt.user.cellview.client.HasKeyboardPagingPolicy$KeyboardPagingPolicy" />
+    <type name="com.google.gwt.user.cellview.client.HasKeyboardPagingPolicy$KeyboardPagingPolicy$Map" />
+    <type name="com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy$KeyboardSelectionPolicy" />
+    <type name="com.google.gwt.user.cellview.client.HasKeyboardSelectionPolicy$KeyboardSelectionPolicy$Map" />
+    <type name="com.google.gwt.user.cellview.client.Header" />
+    <type name="com.google.gwt.user.cellview.client.LoadingStateChangeEvent" />
+    <type name="com.google.gwt.user.cellview.client.LoadingStateChangeEvent$DefaultLoadingState" />
+    <type name="com.google.gwt.user.cellview.client.RowHoverEvent" />
+    <type name="com.google.gwt.user.cellview.client.RowHoverEvent$HoveringScope" />
+    <type name="com.google.gwt.user.cellview.client.RowHoverEvent$HoveringScope$Map" />
+    <type name="com.google.gwt.user.cellview.client.TextColumn" />
+    <type name="com.google.gwt.user.cellview.client.TextHeader" />
     <type name="com.google.gwt.user.client.BaseListenerWrapper" />
     <type name="com.google.gwt.user.client.BaseListenerWrapper$WrapWindowClose" />
     <type name="com.google.gwt.user.client.BaseListenerWrapper$WrapWindowResize" />
@@ -7833,6 +7993,8 @@
     <type name="com.google.gwt.user.client.rpc.core.java.security.DigestException_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.java.security.GeneralSecurityException_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.java.security.NoSuchAlgorithmException_FieldSerializer" />
+    <type name="com.google.gwt.user.client.rpc.core.java.util.ArrayList_CustomFieldSerializer" />
+    <type name="com.google.gwt.user.client.rpc.core.java.util.ArrayList_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.java.util.Collection_CustomFieldSerializerBase" />
     <type name="com.google.gwt.user.client.rpc.core.java.util.Collections" />
     <type name="com.google.gwt.user.client.rpc.core.java.util.Collections$EmptyList_CustomFieldSerializer" />
@@ -7885,6 +8047,8 @@
     <type name="com.google.gwt.user.client.rpc.impl.SerializerBase" />
     <type name="com.google.gwt.user.client.rpc.impl.SerializerBase$MethodMap" />
     <type name="com.google.gwt.user.client.ui.AbsolutePanel" />
+    <type name="com.google.gwt.user.client.ui.AbstractImagePrototype" />
+    <type name="com.google.gwt.user.client.ui.AbstractImagePrototype$ImagePrototypeElement" />
     <type name="com.google.gwt.user.client.ui.AttachDetachException" />
     <type name="com.google.gwt.user.client.ui.AttachDetachException$1" />
     <type name="com.google.gwt.user.client.ui.AttachDetachException$2" />
@@ -7892,13 +8056,23 @@
     <type name="com.google.gwt.user.client.ui.ButtonBase" />
     <type name="com.google.gwt.user.client.ui.ComplexPanel" />
     <type name="com.google.gwt.user.client.ui.ComplexPanel$1" />
+    <type name="com.google.gwt.user.client.ui.Composite" />
+    <type name="com.google.gwt.user.client.ui.DeckPanel" />
+    <type name="com.google.gwt.user.client.ui.DeckPanel$SlideAnimation" />
     <type name="com.google.gwt.user.client.ui.DirectionalTextHelper" />
     <type name="com.google.gwt.user.client.ui.FlowPanel" />
     <type name="com.google.gwt.user.client.ui.FocusWidget" />
     <type name="com.google.gwt.user.client.ui.HasHorizontalAlignment$AutoHorizontalAlignmentConstant" />
     <type name="com.google.gwt.user.client.ui.HasHorizontalAlignment$HorizontalAlignmentConstant" />
+    <type name="com.google.gwt.user.client.ui.HasVerticalAlignment$VerticalAlignmentConstant" />
+    <type name="com.google.gwt.user.client.ui.Image" />
+    <type name="com.google.gwt.user.client.ui.Image$ClippedState" />
+    <type name="com.google.gwt.user.client.ui.Image$State" />
+    <type name="com.google.gwt.user.client.ui.Image$State$1" />
+    <type name="com.google.gwt.user.client.ui.Image$UnclippedState" />
     <type name="com.google.gwt.user.client.ui.Label" />
     <type name="com.google.gwt.user.client.ui.LabelBase" />
+    <type name="com.google.gwt.user.client.ui.ListBox" />
     <type name="com.google.gwt.user.client.ui.Panel" />
     <type name="com.google.gwt.user.client.ui.PasswordTextBox" />
     <type name="com.google.gwt.user.client.ui.PotentialElement" />
@@ -7906,6 +8080,12 @@
     <type name="com.google.gwt.user.client.ui.RootPanel$1" />
     <type name="com.google.gwt.user.client.ui.RootPanel$2" />
     <type name="com.google.gwt.user.client.ui.RootPanel$DefaultRootPanel" />
+    <type name="com.google.gwt.user.client.ui.ScrollImpl" />
+    <type name="com.google.gwt.user.client.ui.ScrollImpl$ScrollImplTrident" />
+    <type name="com.google.gwt.user.client.ui.ScrollPanel" />
+    <type name="com.google.gwt.user.client.ui.SimplePanel" />
+    <type name="com.google.gwt.user.client.ui.SimplePanel$1" />
+    <type name="com.google.gwt.user.client.ui.TextArea" />
     <type name="com.google.gwt.user.client.ui.TextBox" />
     <type name="com.google.gwt.user.client.ui.TextBoxBase" />
     <type name="com.google.gwt.user.client.ui.TextBoxBase$TextAlignConstant" />
@@ -7923,6 +8103,10 @@
     <type name="com.google.gwt.user.client.ui.Widget" />
     <type name="com.google.gwt.user.client.ui.WidgetCollection" />
     <type name="com.google.gwt.user.client.ui.WidgetCollection$WidgetIterator" />
+    <type name="com.google.gwt.user.client.ui.impl.ClippedImageImpl" />
+    <type name="com.google.gwt.user.client.ui.impl.ClippedImageImpl_DraggableTemplateImpl" />
+    <type name="com.google.gwt.user.client.ui.impl.ClippedImageImpl_TemplateImpl" />
+    <type name="com.google.gwt.user.client.ui.impl.ClippedImagePrototype" />
     <type name="com.google.gwt.user.client.ui.impl.FocusImpl" />
     <type name="com.google.gwt.user.client.ui.impl.FocusImplSafari" />
     <type name="com.google.gwt.user.client.ui.impl.FocusImplStandard" />
@@ -7933,6 +8117,22 @@
     <type name="com.google.gwt.useragent.client.UserAgentAsserter_UserAgentAssertionError_FieldSerializer" />
     <type name="com.google.gwt.useragent.client.UserAgentImplGecko1_8" />
     <type name="com.google.gwt.useragent.client.UserAgentImplSafari" />
+    <type name="com.google.gwt.view.client.CellPreviewEvent" />
+    <type name="com.google.gwt.view.client.DefaultSelectionEventManager" />
+    <type name="com.google.gwt.view.client.DefaultSelectionEventManager$BlacklistEventTranslator" />
+    <type name="com.google.gwt.view.client.DefaultSelectionEventManager$CheckboxEventTranslator" />
+    <type name="com.google.gwt.view.client.DefaultSelectionEventManager$SelectAction" />
+    <type name="com.google.gwt.view.client.DefaultSelectionEventManager$SelectAction$Map" />
+    <type name="com.google.gwt.view.client.DefaultSelectionEventManager$WhitelistEventTranslator" />
+    <type name="com.google.gwt.view.client.MultiSelectionModel" />
+    <type name="com.google.gwt.view.client.MultiSelectionModel$SelectionChange" />
+    <type name="com.google.gwt.view.client.Range" />
+    <type name="com.google.gwt.view.client.RangeChangeEvent" />
+    <type name="com.google.gwt.view.client.RowCountChangeEvent" />
+    <type name="com.google.gwt.view.client.SelectionChangeEvent" />
+    <type name="com.google.gwt.view.client.SelectionModel$AbstractSelectionModel" />
+    <type name="com.google.gwt.view.client.SelectionModel$AbstractSelectionModel$1" />
+    <type name="com.google.gwt.view.client.SingleSelectionModel" />
     <type name="com.google.gwt.xhr.client.XMLHttpRequest" />
     <type name="com.google.gwt.xhr.client.XMLHttpRequest$ResponseType" />
     <type name="com.google.gwt.xhr.client.XMLHttpRequest$ResponseType$Map" />
@@ -7952,22 +8152,61 @@
     <type name="com.xyz.client.LoginUi$0methodref$goToTopBar$Type" />
     <type name="com.xyz.client.LoginUi$1" />
     <type name="com.xyz.client.LoginUi$1methodref$goToPage$Type" />
+    <type name="com.xyz.client.MatchListUi" />
+    <type name="com.xyz.client.MatchListUi$0methodref$updatingYourVote$Type" />
+    <type name="com.xyz.client.MatchListUi$1" />
+    <type name="com.xyz.client.MatchListUi$10" />
+    <type name="com.xyz.client.MatchListUi$11" />
+    <type name="com.xyz.client.MatchListUi$1methodref$goToTopBar$Type" />
+    <type name="com.xyz.client.MatchListUi$2" />
+    <type name="com.xyz.client.MatchListUi$2methodref$goToWinner$Type" />
+    <type name="com.xyz.client.MatchListUi$3" />
+    <type name="com.xyz.client.MatchListUi$4" />
+    <type name="com.xyz.client.MatchListUi$5" />
+    <type name="com.xyz.client.MatchListUi$6" />
+    <type name="com.xyz.client.MatchListUi$7" />
+    <type name="com.xyz.client.MatchListUi$8" />
+    <type name="com.xyz.client.MatchListUi$9" />
     <type name="com.xyz.client.PasswordField" />
     <type name="com.xyz.client.SignupUi" />
     <type name="com.xyz.client.SignupUi$0methodref$goToTopBar$Type" />
+    <type name="com.xyz.client.SignupUi$1" />
+    <type name="com.xyz.client.SignupUi$1methodref$goToPage$Type" />
     <type name="com.xyz.client.TextField" />
     <type name="com.xyz.client.TopBar" />
     <type name="com.xyz.client.TopBar$0methodref$goToLogin$Type" />
     <type name="com.xyz.client.TopBar$1methodref$goToSignup$Type" />
+    <type name="com.xyz.client.WinnerTeamUi" />
+    <type name="com.xyz.client.WinnerTeamUi$0methodref$goToMatchListUi$Type" />
+    <type name="com.xyz.client.WinnerTeamUi$1" />
+    <type name="com.xyz.client.WinnerTeamUi$1methodref$goToTopBar$Type" />
+    <type name="com.xyz.client.WinnerTeamUi$2" />
+    <type name="com.xyz.client.WinnerTeamUi$3" />
+    <type name="com.xyz.client.WinnerTeamUi$4" />
+    <type name="com.xyz.client.WinnerTeamUi$5" />
+    <type name="com.xyz.client.WinnerTeamUi$6" />
+    <type name="com.xyz.client.WinnerTeamUi$7" />
     <type name="com.xyz.client.gwtlog" />
     <type name="com.xyz.client.gwtlog$lambda$0$Type" />
     <type name="com.xyz.client.gwtlog$lambda$1$Type" />
     <type name="com.xyz.client.gwtlog$lambda$2$Type" />
     <type name="com.xyz.client.gwtlog$lambda$3$Type" />
+    <type name="com.xyz.client.gwtlog$lambda$4$Type" />
+    <type name="com.xyz.client.gwtlog$lambda$5$Type" />
+    <type name="com.xyz.client.gwtlog$lambda$6$Type" />
+    <type name="com.xyz.client.gwtlog$lambda$7$Type" />
+    <type name="com.xyz.client.gwtlog$lambda$8$Type" />
+    <type name="com.xyz.client.gwtlog$lambda$9$Type" />
     <type name="com.xyz.shared.LoginRequest" />
     <type name="com.xyz.shared.LoginRequest_FieldSerializer" />
     <type name="com.xyz.shared.LoginResponse" />
     <type name="com.xyz.shared.LoginResponse_FieldSerializer" />
+    <type name="com.xyz.shared.MatchForVoting" />
+    <type name="com.xyz.shared.MatchForVoting_FieldSerializer" />
+    <type name="com.xyz.shared.VotingRequest" />
+    <type name="com.xyz.shared.VotingRequest_FieldSerializer" />
+    <type name="com.xyz.shared.VotingResponse" />
+    <type name="com.xyz.shared.VotingResponse_FieldSerializer" />
     <type name="java.io.FilterOutputStream" />
     <type name="java.io.IOException" />
     <type name="java.io.IOUtils" />
@@ -8213,7 +8452,7 @@
     <type name="javax.validation.UnexpectedTypeException" />
     <type name="javax.validation.ValidationException" />
    </types>
-   <types kind="generated" count="75">
+   <types kind="generated" count="90">
     <type name="com.google.gwt.core.shared.SerializableThrowable_FieldSerializer" />
     <type name="com.google.gwt.event.shared.UmbrellaException_FieldSerializer" />
     <type name="com.google.gwt.http.client.RequestException_FieldSerializer" />
@@ -8222,6 +8461,15 @@
     <type name="com.google.gwt.i18n.client.impl.LocaleInfoImpl_shared" />
     <type name="com.google.gwt.jsonp.client.TimeoutException_FieldSerializer" />
     <type name="com.google.gwt.lang.com_00046xyz_00046gwtlog__EntryMethodHolder" />
+    <type name="com.google.gwt.user.cellview.client.AbstractCellTable_TemplateImpl" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator.cellTableFooterBackgroundInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator.cellTableHeaderBackgroundInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator.cellTableLoadingInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator.cellTableSelectedBackgroundInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator.cellTableSortAscendingInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator.cellTableSortDescendingInitializer" />
+    <type name="com.google.gwt.user.cellview.client.CellTable_Resources_default_InlineClientBundleGenerator.cellTableStyleInitializer" />
     <type name="com.google.gwt.user.client.DocumentModeAsserter_DocumentModeProperty" />
     <type name="com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.InvocationException_FieldSerializer" />
@@ -8262,6 +8510,7 @@
     <type name="com.google.gwt.user.client.rpc.core.java.security.DigestException_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.java.security.GeneralSecurityException_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.java.security.NoSuchAlgorithmException_FieldSerializer" />
+    <type name="com.google.gwt.user.client.rpc.core.java.util.ArrayList_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.java.util.Collections_EmptySet_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.java.util.ConcurrentModificationException_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.java.util.EmptyStackException_FieldSerializer" />
@@ -8281,6 +8530,8 @@
     <type name="com.google.gwt.user.client.rpc.core.javax.validation.GroupDefinitionException_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.javax.validation.UnexpectedTypeException_FieldSerializer" />
     <type name="com.google.gwt.user.client.rpc.core.javax.validation.ValidationException_FieldSerializer" />
+    <type name="com.google.gwt.user.client.ui.impl.ClippedImageImpl_DraggableTemplateImpl" />
+    <type name="com.google.gwt.user.client.ui.impl.ClippedImageImpl_TemplateImpl" />
     <type name="com.google.gwt.useragent.client.UserAgentAsserter_UserAgentAssertionError_FieldSerializer" />
     <type name="com.google.gwt.useragent.client.UserAgentImplGecko1_8" />
     <type name="com.google.gwt.useragent.client.UserAgentImplSafari" />
@@ -8289,18 +8540,21 @@
     <type name="com.xyz.client.GreetingService_TypeSerializer" />
     <type name="com.xyz.shared.LoginRequest_FieldSerializer" />
     <type name="com.xyz.shared.LoginResponse_FieldSerializer" />
+    <type name="com.xyz.shared.MatchForVoting_FieldSerializer" />
+    <type name="com.xyz.shared.VotingRequest_FieldSerializer" />
+    <type name="com.xyz.shared.VotingResponse_FieldSerializer" />
    </types>
  </precompilation>
  </precompilations>
  <compilations>
-  <compilation  id="0" elapsed="3262" totalElapsed="25602"  description="ClientBundle.enableInlining=true,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,dragEventSupport=maybe,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,touchEventSupport=maybe,user.agent=gecko1_8,videoElementSupport=maybe,webApiUsage=modern,compiler.useSourceMaps=false,jre.debugMode=DISABLED,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
-   <javascript size="88719" fragments="1">
-    <fragment initial="true" size="88719" />
+  <compilation  id="0" elapsed="3155" totalElapsed="25719"  description="ClientBundle.enableInlining=true,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,dragEventSupport=maybe,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,touchEventSupport=maybe,user.agent=gecko1_8,videoElementSupport=maybe,webApiUsage=modern,compiler.useSourceMaps=false,jre.debugMode=DISABLED,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
+   <javascript size="182462" fragments="1">
+    <fragment initial="true" size="182462" />
    </javascript>
   </compilation>
-  <compilation  id="1" elapsed="1848" totalElapsed="27738"  description="ClientBundle.enableInlining=true,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,dragEventSupport=maybe,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,touchEventSupport=maybe,user.agent=safari,videoElementSupport=maybe,webApiUsage=modern,compiler.useSourceMaps=false,jre.debugMode=DISABLED,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
-   <javascript size="88138" fragments="1">
-    <fragment initial="true" size="88138" />
+  <compilation  id="1" elapsed="2973" totalElapsed="29268"  description="ClientBundle.enableInlining=true,audioElementSupport=maybe,canvasElementSupport=maybe,compiler.emulatedStack=false,compiler.predeclare.cross.fragment.references=false,compiler.stackMode=native,compiler.useSymbolMaps=false,dragEventSupport=maybe,gwt.cspCompatModeEnabled=false,gwt.enableDebugId=false,gwt.forceBidi=false,gwt.logging.simpleConsoleHandler=ENABLED,gwt.suppressNonStaticFinalFieldWarnings=false,gwt.uncaughtexceptionhandler.windowonerror=REPORT_IF_NO_HANDLER,history.noDoubleEncoding=false,jre.checks.api=AUTO,jre.checks.bounds=AUTO,jre.checks.checkLevel=NORMAL,jre.checks.numeric=AUTO,jre.checks.type=AUTO,jre.logging.simpleConsoleHandler=ENABLED,locale=default,rpc.XserializeFinalFields=false,superdevmode=off,touchEventSupport=maybe,user.agent=safari,videoElementSupport=maybe,webApiUsage=modern,compiler.useSourceMaps=false,jre.debugMode=DISABLED,gwt.logging.enabled=FALSE,jre.checkedMode=DISABLED,jre.logging.logLevel=OFF">
+   <javascript size="184060" fragments="1">
+    <fragment initial="true" size="184060" />
    </javascript>
   </compilation>
  </compilations>
