@@ -1,2 +1,0 @@
-serviceClass: com.xyz.client.GreetingService
-path: 6B3B94D90CC3FCB28E4400AB6B15E540.gwt.rpc

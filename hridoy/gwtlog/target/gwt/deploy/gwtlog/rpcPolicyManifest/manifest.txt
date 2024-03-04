@@ -1,3 +1,0 @@
-# Module gwtlog
-# RPC service class, partial path of RPC policy file
-com.xyz.client.GreetingService, 3BBD8B1C3B0E79A9615C6A2E43758303.gwt.rpc
